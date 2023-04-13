@@ -10,7 +10,7 @@ def status():
     return jsonify({'status': 'ok'})
 
 
-@application.route('/prediction', methods=['POST', 'GET'])
+@application.route('/prediction', methods=['POST'])
 def create_prediction():
     data = request.data or '{}'
     body = json.loads(data)
